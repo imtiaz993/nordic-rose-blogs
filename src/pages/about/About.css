@@ -1,0 +1,51 @@
+.about{
+ 
+    background-color: yellow;
+   text-transform: capitalize;
+   padding: 2 0px 50px;
+   font-size: 110px;
+   text-transform: capitalize;
+   text-align: left;
+}
+
+.aboutcontainer h2{
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 40px;
+}
+.aboutcontainer div{
+   width: 70%;
+    margin-left: 40px;
+    
+}
+.borderL{
+    padding-left: 10px;
+    border-left: 5px solid black;
+}
+@media only screen and (max-width:481px){
+    .about{
+
+      
+       font-size: 80px;
+        
+    }
+    
+    .aboutcontainer h2{
+        font-size: x-large;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        margin-top: 40px;
+     
+    }
+    .aboutcontainer div{
+       width: 90%;
+       
+        margin: 0px;
+        margin-left: 10px;
+        
+    }
+    .borderL{
+        padding-left: 10px;
+        border-left: 5px solid black;
+    }
+}

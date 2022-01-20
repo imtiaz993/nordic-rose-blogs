@@ -1,0 +1,43 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 360px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6rem 3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: white;
+ 
+  }
+  .message {
+    font-size:1rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+  .dltbtn {
+    color:inherit;
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid black;
+    margin-right: 2.6rem;
+   
+  }
+  .btnBlack{
+    color:white;
+    background: black;
+  }
+  .dltbtn:hover{
+    border: 1px solid black;
+    background-color: inherit;
+  }
+  .btnBlack:hover{
+    background-color: black;
+    color: white;
+  } 
+  
+
+  

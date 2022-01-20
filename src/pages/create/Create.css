@@ -1,0 +1,88 @@
+.cform {
+  max-width: 960px;
+  margin: 10px auto;
+  padding: 10px 40px;
+
+  box-shadow: 0px 0px 5px lightgray;
+  background:rgba(231, 238, 236, 0.446);
+
+}
+.title{
+  margin: 0px;
+  padding: 0px;
+  word-spacing:2px;
+  margin-bottom: 30px;
+}
+.form-flex{
+ display: flex;
+flex-wrap: wrap;
+}
+
+
+.input,.select{
+  width: 33vw;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+input:placeholder-shown{
+ 
+  font-family:Arial, Helvetica, sans-serif;
+ }
+.select{
+  margin-top: 0px;
+}
+input:placeholder-shown{
+ 
+ font-family:Arial, Helvetica, sans-serif;
+}
+.cform textarea{
+  width: 90%;
+  height: 200px;
+  
+  resize: none;
+  font-size: 12px;
+  padding: 10px;
+}
+.cform .btn{
+  padding: 7px 40px;
+}
+.att1{
+  font-size: 16px;
+  
+}
+@media only screen and (max-width:481px){
+  .cform {
+
+    padding: 20px;
+
+  
+  }
+  .title{
+    margin: 0px;
+    padding: 0px;
+    word-spacing:2px;
+    margin-bottom: 30px;
+  }
+  .form-flex{
+   display: flex;
+  flex-wrap: wrap;
+  }
+  
+  
+  .input,.select{
+   
+    width: 80vw;
+ 
+   
+  }
+
+  
+
+  .cform .btn{
+    padding: 7px 30px;
+  }
+  
+}

@@ -1,0 +1,75 @@
+.form {
+  max-width: 360px;
+  margin: 0px auto;
+  padding: 10px 40px;
+  box-shadow: 0px 0px 9px rgba(0,0,0,0.1);
+  background: #fff;
+  text-align: center;
+
+}
+.create{
+  font-size: 2em;
+  margin: 0px;
+  padding: 0px;
+  word-spacing:5px;
+}
+.form p{
+  word-spacing: -1px;
+  line-height: 1em;
+}
+
+.form input{
+  display: block;
+  padding: 8px;
+  width: 75%;
+  margin: 15px auto;
+  border-radius: 10px;
+  font-size: 16px;
+}
+input:placeholder-shown{
+ 
+ font-family:Arial, Helvetica, sans-serif;
+}
+.btn{
+  margin-top: 20px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+.btn:hover{
+
+}
+.file{
+  display:flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight:600;
+margin-top: 10px;
+}
+.file input{
+  font-size:13px;
+  margin-left: 10px;
+  padding: 3px;
+  width: 50%;
+  margin: 0px;
+}
+.form a{
+  text-transform: none;
+  text-decoration: underline;
+  padding: 0px;
+  background-color: none;
+  margin: 0px;
+  background-color: inherit;
+}
+.form  textarea{
+  width: 75%;
+  height: 42px;
+  resize: none;
+  font-size: 12px;
+  padding: 10px;
+}

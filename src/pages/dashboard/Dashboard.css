@@ -1,0 +1,53 @@
+.dash-blogs-list{
+  width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.dash-blogs-list .edit-delete{
+ 
+  position: relative;
+  top:10%;
+  left: 70%;
+  padding: 2px 15px;
+  
+}
+.my-blog{
+  width: 30%;
+}
+.dash-title{
+  margin: 0 auto;
+  width: 300px;
+}
+.dash-img{
+  width: 390px;
+}
+@media only screen and (max-width:481px){
+  .dash-blogs-list{
+    width: 100%;
+  display: block;
+
+  }
+  .dash-blogs-list button{
+   
+    position: relative;
+    top: 30px;
+    left: 78%;
+    padding: 2px 15px;
+    
+  }
+  .my-blog{
+    width: 90%;
+    
+  }
+  .dash-title{
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .dash-img{
+    width: 100vw;
+    height: 20vh;
+  }
+}
+

@@ -1,0 +1,67 @@
+.logform {
+    max-width: 360px;
+    margin: 50px auto;
+    
+    padding: 40px 40px 100px 40px;
+
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.1);
+    background: #fff;
+    text-align: center;
+  
+  }
+  .create1{
+    font-size: 2em;
+    margin: 0px;
+    padding: 0px;
+    word-spacing:5px;
+    margin-bottom: 30px;
+  }
+  p{
+    word-spacing: -1px;
+    line-height: 1em;
+  }
+.error{
+  color: red;
+}
+  input{
+    display: block;
+    padding: 8px;
+    width: 75%;
+    margin: 15px auto;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  input:placeholder-shown{
+   
+   font-family:Arial, Helvetica, sans-serif;
+  }
+  .btn{
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+  .btn:hover{
+    color: black;
+    background-color:lightblue;
+ 
+  }
+  .file{
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-weight:600;
+  
+  }
+  .file input{
+    font-size:13px;
+    margin-left: 10px;
+    padding: 3px;
+    width: 50%;
+    margin: 0px;
+  }
