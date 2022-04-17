@@ -52,8 +52,12 @@
      .nordicfooter{
          width: 80%;
          margin: 0 auto;
-         margin-top: 40px;
+         margin-top: 20px;
          font-weight: 200;
+         font-size: x-large;
+     }
+     .footer marquee{
+         font-size: xx-small;
      }
      
      .footer a{

@@ -40,16 +40,16 @@ export default function Comments({ project,id,setComment}) {
 
   return (
     <div className="project-comments">
-      <h3 className="com-btn">Blog Comments<span><button onClick={()=>{setComment(false)}}>X</button></span></h3>
+  
       
     {signinAlert && <SigninAlert setSigninAlert={setSigninAlert}/>}
       <ul className="comments-list">
+        {project.comments && project.comments.length===0 && <p>No commments yet..</p>}
         {project.comments && project.comments.map(comment => (
           <li className="each-comment" key={comment.id}>
             <div className="comment-author">
               <img width="25" src={comment.photoURL} />
               <div className="det">
-               
               <p className="name" >{comment.displayName}</p>
               <p className="time">{formatDistanceToNow(comment.createdAt.toDate(), {addSuffix: true})}</p>
               </div>
@@ -69,6 +69,7 @@ export default function Comments({ project,id,setComment}) {
           required
             onChange={(e) => setNewComment(e.target.value)}
             value={newComment}
+            placeholder="Type comment here..."
           ></textarea>
         </label>
         <button className="comment-btn">Add Comment</button>

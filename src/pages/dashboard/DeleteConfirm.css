@@ -1,7 +1,18 @@
+.overlay{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(128, 128, 128,0.5);
+  display: block;
+  z-index: 10;
+}
 .modal {
     position: fixed;
     left: 50%;
     top: 50%;
+    z-index: 5;
     transform: translate(-50%, -50%);
     max-width: 360px;
     display: inline-flex;
@@ -10,13 +21,14 @@
     padding: 1.6rem 3rem;
     border: 1px solid black;
     border-radius: 5px;
-    background: white;
+    background-color: rgb(238, 235, 235);
  
   }
-  .message {
+  .mymessage {
     font-size:1rem;
     margin-bottom: 1rem;
     margin-top: 0;
+  
   }
   .dltbtn {
     color:inherit;
@@ -38,6 +50,39 @@
     background-color: black;
     color: white;
   } 
-  
+  @media only screen and (max-width:1000px) and (min-width:482px){
+    .modal {
+      width: 57%;
+          }
+          .mymessage {
+            font-size:0.9rem;
+          }
+          .dltbtn {
+            padding: 0.4rem 0.5rem;
+            border: 1px solid black;
+            margin-right: 2rem;
+           
+          }
+  }
 
+  @media only screen and (max-width:481px){
+    .modal {
+width: 70%;
+    }
+    .areyousure{
+      font-size: larger;
+      margin: 0px;
+    }
+    .mymessage {
+      font-size:0.8rem;
+      margin: 0px;
+    }
+    .dltbtn {
+      padding: 0.3rem 0.5rem;
+     
+      margin-right: 2rem;
+     
+    }
+
+  }
   

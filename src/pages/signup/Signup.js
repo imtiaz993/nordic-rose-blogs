@@ -1,13 +1,23 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSignup } from '../../hooks/useSignup'
-import {Link} from "react-router-dom";
+import {Link,useNavigate} from "react-router-dom";
+import { useAuthContext } from '../../hooks/useAuthContext';
 import Login from "../login/Login"
+import Footer from '../../components/Footer';
+
+
 
 // styles
 import './Signup.css'
 
 export default function Signup() {
- 
+  const { user } = useAuthContext()
+  const Navigate = useNavigate();
+
+  useEffect(() => {
+    if(user)
+    Navigate('/')
+ }, [user,Navigate])
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [displayName, setDisplayName] = useState('')
@@ -55,6 +65,7 @@ export default function Signup() {
         type="text" 
         onChange={(e) => setDisplayName(e.target.value)} 
         value={displayName}
+        maxLength='20'
       />
     </label>
     <label>
@@ -83,6 +94,7 @@ export default function Signup() {
             required
             onChange={(e) => setAbout(e.target.value)}
             value={about} 
+            maxLength='300'
           ></textarea>
         </label>
     <label className="file">
@@ -96,15 +108,20 @@ export default function Signup() {
       
     </label>
     {!isPending && <button className="btn">Create Account</button>}
-    {isPending && <button className="btn" disabled>Loading....</button>}
+    {isPending && <button className="btn" disabled>Signing Up....</button>}
     {error && <div className="error">{error}</div>}
     {thumbnailError && <div className="error">{thumbnailError}</div>}
     <p>Already Have an Account?
       <br/>
-    <Link to ='/Login' >Sign In</Link></p>
+     
+
+    <Link style={{ textDecoration: "underline"}} to ='/Login' >Sign In</Link></p>
     
   </form>
    
+    
+    
+    <Footer/>
     </>
   )
 }

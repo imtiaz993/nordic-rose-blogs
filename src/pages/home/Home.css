@@ -1,78 +1,129 @@
 .blog-container{
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     
     border-bottom: 2px solid black;
     padding-bottom: 20px;
 }
+.b-img{
+    object-fit: contain;
+width: 100%;
+    height: 50vh;
+}
 .blog-img{
     width: 100%;
-    height: 50vh
+height: 100%;
+
 }
 .blog-title{
     width: 100%;
-    margin: 20px auto;
+    margin: 30px auto;
     text-align: center;
+    font-weight: bold;
 }
 .blog-titlee{
     width: 65%;
-    margin: 20px auto;
+    margin: 5px auto;
     text-align: center;
+    font-weight: 500;
+    height: 50px;
+    overflow: hidden;
+    border-top: 1px solid black;
+padding: 5px 0px;
 }
 
 
 .other-blogss{
    
-    width: 50%;
+    width: 75%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 20px auto;
+    margin: 10px auto;
+    
 }
 .all-articles{
     width: 100%;
     text-align: center;
     margin-top: 30px;
+
 }
 .each-blogg{
     width: 50%;
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
+    object-fit: contain;
+
+   
 }
+
 .blog-imgg{
     width: 70%;
     height: 20vh;
+
     
 }
-
+@media only screen and (max-width:1000px) and (min-width:482px){
+    .b-img{
+            height: 20vh;
+        }
+        .blog-imgg{
+            height: 10vh;
+        }
+}
 @media only screen and (max-width:481px){
     .blog-container{
         width: 100%;
+padding-bottom: 0px;
+
+    }
+    .b-img{
+    width: 100%;
+        height: 25vh;
     }
     .blog-img{
-        height: 20vh
+        width: 100%;
+    height: 100%;
+    
     }
     .blog-title{
-        width: 85%;
+        width: 90%;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 25px;
+        font-size: larger;
+    }
+    .blog-titlee{
+        width: 100%;
+        height: 32px;
+    }
+    
+    
+ 
+    .all-articles{
+        width: 100%;
+        font-size: small;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    
     }
     .other-blogss{
-   
-        width: 90%;
-        margin: 20px auto;
+        display: block;
+        width: 80%;
+        margin: 30px auto;
     }
     .each-blogg{
         width: 100%;
         margin-top: 20px;
-        text-align: center;
+
     }
     .blog-imgg{
         width: 100%;
-        height: 15vh;
+        height: 20vh;
         
     }
-    .blog-titlee{
-        width: 65%;
-    }
+    
     
     
 }

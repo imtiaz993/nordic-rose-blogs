@@ -1,3 +1,13 @@
+    .overlay{
+      position: fixed;
+      top:0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(128, 128, 128,0.5);
+      display: block;
+      z-index: 10;
+    }
     .modal {
     position: fixed;
     left: 50%;
@@ -10,13 +20,17 @@
     padding: 1.6rem 3rem;
     border: 1px solid black;
     border-radius: 5px;
-    background: white;
- 
+    background-color: rgb(238, 235, 235);
   }
   .message {
     font-size:1rem;
     margin-bottom: 1rem;
     margin-top: 0;
+  }
+  .options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   .Sbtn {
     color:inherit;
@@ -37,6 +51,34 @@
   .btnBlack:hover{
     background-color: black;
     color: white;
+  }
+  @media only screen and (max-width:1000px) and (min-width:482px){
+    .modal {
+      width: 57%;
+          }
+          .message {
+            font-size:0.9rem;
+          }
+          .Sbtn {
+            padding: 0.4rem 0.5rem;
+            border: 1px solid black;
+            margin-right: 2rem;
+           
+          }
+  }
+  @media only screen and (max-width:481px){
+    .modal {
+width: 70%;
+    }
+    .message {
+      font-size:0.9rem;
+    }
+    .Sbtn {
+      padding: 0.4rem 0.5rem;
+      border: 1px solid black;
+      margin-right: 2rem;
+     
+    }
   }
   
 

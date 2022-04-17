@@ -4,17 +4,19 @@
     border-bottom: 2px solid black;    
 }
 .blog-title1{
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 30px;
+    font-size: x-large;
 }
 .blog-img1{
+ 
     width: 100%;
-    height: 50vh;
+    height: 100%;
 }
 .content-comment{
-    display: flex;
+    display: block;
     
     
 }
@@ -26,46 +28,62 @@
     border-bottom: 1px dotted black;    
 }
 .blog-auth{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
+ 
     margin-bottom: 40px;
 }
-.blog-auth span{
-    padding:5px 20px;
-    border: 1px solid lightgray;
-    margin-left: 1px;
-    box-shadow: 0px 0px 2px lightgray;
-}
-.blog-auth div{
-    margin-right: auto;
-}
+
+
+
 .author-img{
 width: 50px;
 height: 50px;
 border-radius: 50%;
-float: left;
 margin-top: 15px;
+object-fit: cover;
+
 }
 .author-name{
-
+text-align: left;
 font-weight: bold;
-margin:25px 0px 5px 0px;
+margin:20px 0px 5px 0px;
+}
+.a-img{
+    width: 100%;
+    height: 50vh;
+    object-fit: contain;
 }
 .auth-time{
-    display: inline-block;
-    margin-left: 10px;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.auth-time div:nth-child(2){
+    margin-left: 15px;
+    width: 75%;
+}
+.auth-time p:nth-child(2){
+    width: 100%;
+}
+.auth-time .fb-tw{
+    margin-left: auto;
 }
 .read-time{
     margin: 0px;
+    text-align: left;
     display: inline-block;
 }
 .actual-content{
   
     width: 95%;
+    min-height: 100px;
     margin: 0 auto;
     word-spacing: 2px;
     line-height: 1.5em;
+    text-align: justify;
 }
 .react{
     margin-top: 50px;
@@ -75,28 +93,46 @@ margin:25px 0px 5px 0px;
     width: 40%;
  font-weight: 600;
 
+
     background-color: white;
     box-shadow: 0px 0px 2px lightgray;
-    color: black;
     border: 1px solid lightgray;
     margin-left: 10px;
     padding: 10px ;
 }
+.like:hover{
+    background-color: lightgray;
+    color: white;
+}
+.comment:hover{
+    background-color: lightgray;
+    color: white;
+}
 .like i{
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color:blue;
 }
 .comment i{
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color:blue;
 }
 .tag{
+    margin: 50px 0px 10px 0px;
+    display: block;
+ 
+}
+.tag span{
     margin-left: 10px;
-    text-decoration: underline;
+    text-decoration: underline;  
 }
 .other-bloggs{
     width: 75%;
     display: flex;
+    flex-wrap: wrap;
     margin: 20px auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 .whatreadnext{
@@ -104,16 +140,31 @@ margin:25px 0px 5px 0px;
     text-align: center;
 }
 .each-blog3{
-    width: 30%;
-    margin-left: 20px;
+    width: 50%;
+    margin-top: 10px;
+    text-align: center;
+    object-fit: contain;
+    
 }
 .blog-img3{
-    width: 100%;
+    width: 70%;
+    height: 20vh;
    
+}
+.blog-title3{
+    width: 65%;
+    margin: 5px auto;
+    text-align: center;
+    font-weight: 400;
+    height: 50px;
+    overflow: hidden;
+    border-top: 1px solid black;
+padding: 5px 0px;
 }
 .auth-about{
     width: 50%;
     display: flex;
+    flex-wrap: wrap;
     margin: 0px auto;
     text-align: left;
     margin-bottom: 30px;
@@ -128,6 +179,8 @@ margin:25px 0px 5px 0px;
 .auth-about img{
     border-radius: 50%;
     height: 50px;
+object-fit: cover;
+
 }
 .newsletter-form{
     width: 40%;
@@ -164,52 +217,105 @@ margin:25px 0px 5px 0px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
-@media only screen and (max-width:481px){
-    .blog-title1{
-        width: 90%;
-    }
-    .blog-img1{
-        width: 100%;
-        height: 20vh;
+@media only screen and (max-width:1000px) and (min-width:482px){
+    .a-img{
+     
+        height: 25vh;
     }
     .content{  
         width: 90%;
-     
     }
-    .blog-auth{
-        display: block;
-        margin-top: 10px;
-        
+    .actual-content::first-letter{
+        margin-left: 50px;
     }
-    .blog-auth div{
+    .auth-about{
+        width: 90%;
+    }
+    .blog-img3{
+        height: 10vh;
+    }
+    .newsletter-form{
+        width: 70%;
+    }
+    like:hover{
+        color: black;
+        background-color: white;
+    }
+    .comment:hover{
+        color: black;
+        background-color: white;
+    }
+}
+@media only screen and (max-width:481px){
+    .blog-title1{
+        width: 90%;
+        font-size: larger;
         margin-bottom: 10px;
     }
-    .blog-auth span{
-        
-        margin-left: 0px;
-      padding: 5px 45px;
+    .blog-img1{
+        width: 100%;
+        height: 100%;
     }
+
+   
+    .content{  
+        width: 90%;
+        margin: 0px auto;
+
+     
+    }
+    .like:hover{
+        color: black;
+        background-color: white;
+    }
+    .comment:hover{
+        color: black;
+        background-color: white;
+    }
+    .blog-auth{
  
-       
-        .auth-time{
-            display: inline-block;
-            margin-left: 10px;
-        }
-        .read-time{
-            margin: 0px;
-            display: inline-block;
-        }
+        margin-bottom: 20px;
+    }
+      
+
+
+    .a-img{
+        width: 100%;
+        height: 30vh;
+        object-fit: contain;
+        margin-bottom: 20px;
+
+    }
+    .auth-time{
+
+        margin: 10px 0px;
+  
+        
+    }
+    .actual-content{
+        word-spacing: 0px;
+    }
+    .actual-content::first-letter{
+        margin-left: 50px;
+    }
         .react{
             margin-top: 50px;
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .like,.comment{
-            width: 50%;
-        
+            width: 45%;
             margin-left: 0px;
           
         }
-     
+        .auth-about{
+            width: 90%;
+            margin: 10px auto;
+
+         
+        }
         
         .other-bloggs{
             width: 95%;
@@ -218,9 +324,20 @@ margin:25px 0px 5px 0px;
         }
         .whatreadnext{
             font-size: x-large;
-            margin-top: 50px;
+            margin: 50px 0px 30px 0px;
             text-align: center;
+
         }
+
+    
+  
+   
+     
+
+
+
+
+
         .each-blog3{
             width: 90%;
             margin: 15px auto;
@@ -228,7 +345,7 @@ margin:25px 0px 5px 0px;
         }
         .blog-title3{
             width: 80%;
-            margin: 0 auto;
+            margin: 0px auto;
             text-align: center;
         }
         .blog-img3{
@@ -237,6 +354,12 @@ margin:25px 0px 5px 0px;
         }
         .newsletter-form{
             width: 90%;
+        }
+        .newsletter-form h2{
+            font-size: large;
+        }
+        .newsletter-form p{
+            font-size: 14px;
         }
         .newsletter-form h2,p{
         

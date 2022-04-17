@@ -1,5 +1,8 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { useLogin } from '../../hooks/useLogin'
+import {Link,useNavigate} from "react-router-dom";
+import { useAuthContext } from '../../hooks/useAuthContext';
+import Footer from '../../components/Footer';
 
 
 // styles
@@ -10,7 +13,13 @@ export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const { login, error, isPending } = useLogin()
-  
+  const { user } = useAuthContext()
+  const Navigate = useNavigate();
+
+  useEffect(() => {
+    if(user)
+    Navigate('/')
+ }, [user,Navigate])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -21,7 +30,7 @@ export default function Login() {
    
   }
 
-  return (
+  return (<>
     <form onSubmit={handleSubmit} className="logform">
       <h2 className="create1">Login</h2>
       <label>
@@ -45,8 +54,10 @@ export default function Login() {
         />
       </label>
       {!isPending && <button className="btn">Log in</button>}
-      {isPending && <button className="btn" disabled>Loading</button>}
+      {isPending && <button className="btn" disabled>Logging In...</button>}
       {error && <div className="error">{error}</div>}
     </form>
+    <Footer/>
+    </>
   )
 }

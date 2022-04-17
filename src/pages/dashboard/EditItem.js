@@ -8,7 +8,7 @@ import Select from 'react-select'
 import Footer from '../../components/Footer'
 
 // styles
-import './Create.css'
+import '../create/Create.css'
 
 const tags = [
   { value: 'development', label: 'Development' },
@@ -17,8 +17,8 @@ const tags = [
   { value: 'marketing', label: 'Marketing' },
 ]
 
-export default function Create({edit,sendDoc}) {
-  console.log(edit)
+export default function EditItem({Edit,document}) {
+    console.log(document)
   const { documents, error } = useCollection('blogs')
   const history = useNavigate()
   const [creating,setCreating]=useState(false)
@@ -26,42 +26,17 @@ export default function Create({edit,sendDoc}) {
   const { user } = useAuthContext()
   useEffect(() => {
     if(!user)
-    history('/Signup')
+    history('/Login-Signup')
  }, [user,history])
 
   // form field values
-  const [title, setTitle] = useState()
-  const [img, setImg] = useState()
-  const [content, setContent] = useState()
-  const [time, setTime] = useState()
-  const [tag, setTag] = useState()
+  const [title, setTitle] = useState(document.title)
+  const [content, setContent] = useState(document.content)
+  const [time, setTime] = useState(document.time)
+  const [tag, setTag] = useState(document.tag)
   const [formError, setFormError] = useState(null)
-  const [imgError,setImgError]=useState(null)
-  
- 
-  const handleFileChange = (e) => {
-    
-    setImg(null)
-    let selected = e.target.files[0]
-    console.log(selected)
 
-    if (!selected) {
-      setImgError('Please select a file')
-      return
-    }
-    if (!selected.type.includes('image')) {
-      setImgError('Selected file must be an image')
-      return
-    }
-    if (selected.size > 1000000) {
-      setImgError('Image file size must be less than 1MB')
-      return
-    }
-    
-    setImgError(null)
-    setImg(selected)
-    console.log('thumbnail updated')
-  }
+
  
 
   const handleSubmit = async (e) => {
@@ -76,28 +51,20 @@ export default function Create({edit,sendDoc}) {
     
 
   
-    const createdBy = { 
-      displayName: user.displayName, 
-      photoURL: user.photoURL,
-      id: user.uid
-    }
+
 
     const project = {
       title:title,
       content:content,
-      createdBy:createdBy,
-      createdAt: timestamp.fromDate(new Date()),
       tag: tag,
       time: time,
-      comments: [],
-      likes:0,
     }
   
-    await addDocument(project,img)
+    await updateDocument(document.id,project)
     console.log(response);
     if (!response.error) {
       setCreating(false)
-     history('/Dashboard')
+     Edit(false)
    
     }
  
@@ -110,11 +77,11 @@ export default function Create({edit,sendDoc}) {
     <div className="cform">
       <div className='title-cross'>
       <div>
-     {!edit && <h2 className="title">Create NEW BLOG POST</h2>}
-     {edit && <h2 className="title">UPDATE BLOG POST</h2>}
+     {!Edit && <h2 className="title">Create NEW BLOG POST</h2>}
+     {Edit && <h2 className="title">UPDATE BLOG POST</h2>}
      </div>
      <div>
-     <Link to='/Dashboard'><button className="X">X</button></Link>
+     <button className="X" onClick={() => { Edit(false); }}>X</button>
      </div>
      </div>
       <form onSubmit={handleSubmit}>
@@ -129,7 +96,7 @@ export default function Create({edit,sendDoc}) {
             type="text" 
             onChange={(e) => setTitle(e.target.value)}
             value={title}
-            maxLength='50'
+            maxLength='70'
           />
         </label>
         </div>
@@ -141,6 +108,8 @@ export default function Create({edit,sendDoc}) {
             className="select"
             isMulti='multi'
             onChange={(option) => setTag(option)}
+            defaultValue={document.tag}
+           
             required
             options={tags}
           />
@@ -161,20 +130,7 @@ export default function Create({edit,sendDoc}) {
           />
         </label>
         </div>
-        <div className='att3'>
-        <label className='att2'>
-      <span className='att4'>Attachment</span>
-      <input
-      
-        className='att1 input'
-        required
-        type="file"
-        
-        onChange={handleFileChange}
-      />
-      
-    </label>
-        </div>
+       
         
         </div>
         <div>
@@ -188,12 +144,11 @@ export default function Create({edit,sendDoc}) {
           ></textarea>
         </label>
         </div>
-        {!edit && !creating && <button className="btn" >Create</button>}
-        {edit && <button className="btn" >Update</button>}
-        {!edit && creating && <button disabled className="btn" >Creating...</button>}
+        { !creating && <button className="btn" >Update</button>}
+        
+        {creating && <button disabled className="btn" >Updating...</button>}
 
         {formError && <p className="error">{formError}</p>}
-        {imgError && <div className="error">{imgError}</div>}
       </form>
       
     </div>

@@ -22,6 +22,11 @@
     padding-left: 10px;
     border-left: 5px solid black;
 }
+.aboutcontainer p{
+    text-align: left;
+    width:100%
+
+}
 @media only screen and (max-width:481px){
     .about{
 

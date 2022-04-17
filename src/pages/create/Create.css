@@ -13,6 +13,19 @@
   word-spacing:2px;
   margin-bottom: 30px;
 }
+.title-cross{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.X{
+  padding: 5px 10px;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size:x-large;
+  cursor: pointer;
+}
 .form-flex{
  display: flex;
 flex-wrap: wrap;
@@ -33,6 +46,7 @@ input:placeholder-shown{
  }
 .select{
   margin-top: 0px;
+
 }
 input:placeholder-shown{
  
@@ -57,32 +71,47 @@ input:placeholder-shown{
   .cform {
 
     padding: 20px;
+  }
 
+  .title{
+
+    font-size: larger;
+  }
+
+  .X{
+    padding: 0px;
   
   }
-  .title{
-    margin: 0px;
-    padding: 0px;
-    word-spacing:2px;
-    margin-bottom: 30px;
-  }
   .form-flex{
-   display: flex;
-  flex-wrap: wrap;
+ display: block;
   }
   
   
   .input,.select{
    
     width: 80vw;
- 
-   
+    padding: 8px;
+    font-size: 14px;
+
+  }
+  .select{
+  width: 100%;
   }
 
   
 
   .cform .btn{
     padding: 7px 30px;
+  }
+
+  .cform textarea{
+    height: 100px;    
+    font-size: 13px;
+  }
+
+  .att1{
+    font-size: 16px;
+    
   }
   
 }
