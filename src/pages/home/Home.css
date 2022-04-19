@@ -5,6 +5,10 @@
     border-bottom: 2px solid black;
     padding-bottom: 20px;
 }
+.blg{
+    padding-top: 90px; 
+
+}
 .b-img{
     object-fit: contain;
 width: 100%;

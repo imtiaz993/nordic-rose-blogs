@@ -31,7 +31,7 @@ const Dashboard = () => {
   }):null
   return (
   
-    <div>
+    <div className='dash'>
   {!edit &&  <div className='LogCreate'>
     
             {document &&  !isPending && <button className="btn" onClick={logout}>Logout</button>}

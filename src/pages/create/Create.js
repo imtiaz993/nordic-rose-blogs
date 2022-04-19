@@ -107,7 +107,8 @@ export default function Create({edit,sendDoc}) {
 
   return (
     <>
-    <div className="cform">
+    <div className="createee">
+      <div className='cform'>
       <div className='title-cross'>
       <div>
      {!edit && <h2 className="title">Create NEW BLOG POST</h2>}
@@ -195,7 +196,7 @@ export default function Create({edit,sendDoc}) {
         {formError && <p className="error">{formError}</p>}
         {imgError && <div className="error">{imgError}</div>}
       </form>
-      
+      </div>
     </div>
     <Footer/>
     </>

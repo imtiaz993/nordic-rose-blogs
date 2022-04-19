@@ -1,8 +1,13 @@
+.dash{
+  padding-top: 70px; 
+
+}
 .edit-delete-title{
   width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
 }
 .dash-blogs-list .edit-delete{
  

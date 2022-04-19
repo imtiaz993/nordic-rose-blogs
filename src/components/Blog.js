@@ -49,7 +49,7 @@ const Blog = () => {
 
 
   return (
-    <div>
+    <div className='bbb'>
       {!error && !document && <MySpinner/>}
       {error && <p className="error">{error}</p>}
       {document &&

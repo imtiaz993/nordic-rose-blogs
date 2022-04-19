@@ -1,5 +1,8 @@
 
-  
+  .Nvbar{
+    position: fixed;
+    width: 100%;
+  }
   .nav {
     height: 65px;
     background-color: white;

@@ -30,7 +30,7 @@ export default function Login() {
    
   }
 
-  return (<>
+  return (< div className='fff'>
     <form onSubmit={handleSubmit} className="logform">
       <h2 className="create1">Login</h2>
       <label>
@@ -58,6 +58,6 @@ export default function Login() {
       {error && <div className="error">{error}</div>}
     </form>
     <Footer/>
-    </>
+    </div>
   )
 }

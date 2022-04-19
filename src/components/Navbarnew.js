@@ -5,7 +5,7 @@ import './Navbarnew.css'
 const Navbarnew = () => {
   const { user } = useAuthContext()
   const [expanded,setExpanded]=React.useState(false)
-  return (
+  return (<div className='Nvbar'>
     <div className="nav">
     <input type="checkbox" id="nav-check"/>
     <div className="nav-header">
@@ -35,6 +35,7 @@ const Navbarnew = () => {
         <Link onClick={()=>{setExpanded(!expanded)}} className='signupbtn link' to ="/Dashboard"><img className="userimg" width="30" height='30' src={user.photoURL} />{user.displayName} </Link>
         }
     </div>
+  </div>
   </div>
   )
 }

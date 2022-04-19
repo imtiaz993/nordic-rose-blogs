@@ -55,7 +55,7 @@ export default function Signup() {
   }
 
   return (
-    <> <form onSubmit={handleSubmit} className="form">
+    <div className='ff' > <form onSubmit={handleSubmit} className="form">
     <h2 className="create">Create An Account</h2>
     <p className="text">Create an account to enjoy all the<br/>services without any ads for free!</p>
     <label>
@@ -122,6 +122,6 @@ export default function Signup() {
     
     
     <Footer/>
-    </>
+    </div>
   )
 }
